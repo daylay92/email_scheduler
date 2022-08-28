@@ -63,7 +63,24 @@ $ cd email_scheduler
 $ make up
 ```
 
+##### Testing (Unit and Integration Tests)
+Use the following command to run the unit tests:
+```bash
+# Runs the test cases on the application
+$ make test
+```
+
 ### API Endpoints
 There are a couple of REST API endpoints that has been created for managing users. Once the application is up, visit `http://localhost:4500/docs` on your browser and you should see the OpenAPI documentation containing all the endpoints.
 Please note that you would need to provide a `API-KEY` as a header parameter with the field; `X-API-KEY` to access the endpoints. The 
 `API-KEY` must be a string equivalent of the `API_KEY` variable described in the environment variable section.
+
+
+###### Other Technologies used:
+
+- Typescript
+- NestJs
+- Redis stack
+- Swagger
+- Jest
+
