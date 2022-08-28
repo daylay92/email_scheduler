@@ -1,0 +1,19 @@
+version: "3"
+services:
+  backend:
+    build: .
+    env_file: .env
+    environment:
+      - REDIS_URL=redis://scheduler_redis
+    ports:
+      - '4500:4500'
+    container_name: email_scheduler
+    command: ['bash', '-c', 'yarn start:prod']
+    depends_on:
+      - redis
+    volumes:
+      - .:/usr/src/app
+      - /src/app/node_modules
+  redis:
+      image: "redis/redis-stack"
+      container_name: scheduler_redis

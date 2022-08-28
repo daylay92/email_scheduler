@@ -1,0 +1,8 @@
+docker-compose.yml
+node_modules
+npm-debug.log
+logs
+log
+dist
+*.log
+.env
